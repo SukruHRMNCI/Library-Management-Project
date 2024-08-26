@@ -36,7 +36,7 @@ public class LibraryProjectApplication implements CommandLineRunner {
 		if(userRoleService.getAllUserRole().isEmpty()){
 			Role admin = new Role();
 			admin.setRoleType(RoleType.ADMIN);
-			admin.setName("Admin");
+			admin.setName("ADMIN");
 			userRoleRepository.save(admin);
 
 			Role employee = new Role();
@@ -64,7 +64,7 @@ public class LibraryProjectApplication implements CommandLineRunner {
 			adminRequest.setPhone("111-111-1111");
 			adminRequest.setBirthDate(LocalDate.of(1980,2,2));
 			adminRequest.setAddress("Mehmet Akif Ersoy mahallesi Yenimahalle Ankara");
-			userService.saveUser(adminRequest, "Admin");
+			userService.saveUser(adminRequest, "ADMIN");
 		}
 	}
 }
